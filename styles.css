@@ -1,0 +1,544 @@
+/* =========================
+   GLOBAL STYLES
+========================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #e9e0eb;
+    color: #4f315a;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+}
+
+/* =========================
+   TYPOGRAPHY
+========================= */
+
+.chewy-regular {
+    font-family: "Chewy", system-ui;
+}
+
+/* =========================
+   HEADER / NAVIGATION
+========================= */
+header {
+    background-color: #c8afd4;
+    padding: 15px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 10px rgba(79, 49, 90, 0.08);
+}
+
+nav {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Logo in top-left */
+.logo-container {
+    position: absolute;
+    left: 0;
+    display: flex;
+    align-items: center;
+}
+
+.logo-container img {
+    height: 65px;   /* adjust as needed */
+    width: auto;
+    display: block;
+}
+
+/* Keep links centered */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+}
+
+.nav-item,
+.contact-me-button {
+    text-decoration: none;
+    font-family: "Chewy", system-ui;
+    color: #4f315a;
+    font-size: 1.5rem;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: 0.25s ease;
+}
+
+.nav-item:hover,
+.contact-me-button:hover {
+    background-color: #ede3f0;
+    transform: translateY(-2px);
+}
+
+/* =========================
+   HOME PAGE HERO
+========================= */
+
+.img-name-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    padding: 90px 8%;
+}
+
+.main-img img {
+    width: 650px;
+    max-width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 32px;
+    box-shadow: 0 10px 30px rgba(79, 49, 90, 0.15);
+}
+
+.home-right-side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-name-overlay {
+    font-family: "Chewy", system-ui;
+    font-size: 6rem;
+    line-height: 0.95;
+    color: #4f315a;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.home-info-text {
+    font-size: 1.5rem;
+    color: #4f315a;
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+/* =========================
+   SOCIAL BUTTONS
+========================= */
+
+.social-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.social-buttons a {
+    text-decoration: none;
+    background-color: #dccbe2;
+    color: #4f315a;
+    font-family: "Chewy", system-ui;
+    font-size: 1.3rem;
+    padding: 14px 28px;
+    border-radius: 40px;
+    border: 2px solid #b697c0;
+    transition: 0.25s ease;
+}
+
+.social-buttons a:hover {
+    background-color: #ede3f0;
+    transform: translateY(-5px) scale(1.05);
+}
+
+/* =========================
+   ABOUT SECTION
+========================= */
+
+.about-me-description {
+    max-width: 1100px;
+    margin: 70px auto 0;
+    padding: 0 30px;
+    font-size: 1.6rem;
+    line-height: 1.8;
+    text-align: center;
+    color: #4f315a;
+}
+
+.about-line {
+    width: 80%;
+    height: 2px;
+    background-color: #4f315a;
+    margin: 60px auto;
+    border: none;
+}
+
+/* =========================
+   EDUCATION + HOBBIES
+========================= */
+
+.about-me-section,
+.my-hobbies-section {
+    padding: 80px 10%;
+}
+
+.about-me-section h2,
+.my-hobbies-section h2 {
+    text-align: center;
+    font-family: "Chewy", system-ui;
+    font-size: 3rem;
+    color: #4f315a;
+    margin-bottom: 50px;
+}
+
+.education-card,
+.hobbies-card {
+    background-color: #f7f1f8;
+    border-radius: 28px;
+    border: 2px solid #dccbe2;
+    padding: 40px;
+    box-shadow: 0 8px 18px rgba(79, 49, 90, 0.10);
+    transition: 0.25s ease;
+}
+
+.education-card:hover,
+.hobbies-card:hover {
+    transform: translateY(-6px);
+}
+
+.education-card h3,
+.hobbies-card h3 {
+    font-family: "Chewy", system-ui;
+    color: #4f315a;
+    font-size: 2rem;
+    margin-bottom: 18px;
+}
+
+.education-card p,
+.hobbies-card p {
+    color: #4f315a;
+    font-size: 1.15rem;
+    line-height: 1.9;
+}
+
+.degree-section {
+    padding: 10px 0;
+}
+
+.degree-section h4 {
+    font-family: "Chewy", system-ui;
+    font-size: 1.6rem;
+    color: #4f315a;
+    margin-bottom: 15px;
+}
+
+.degree-divider {
+    height: 2px;
+    background-color: #dccbe2;
+    margin: 35px 0;
+    border-radius: 20px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer-section {
+    background-color: #c8afd4;
+    display: flex;
+    justify-content: center;
+    padding: 25px;
+    margin-top: 70px;
+}
+
+.footer-section h3 {
+    font-family: "Chewy", system-ui;
+    color: #4f315a;
+    font-size: 1.5rem;
+}
+
+/* =========================
+   PROJECTS PAGE
+========================= */
+
+.projects-page {
+    min-height: 100vh;
+    padding: 70px 8%;
+}
+
+.projects-hero {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.projects-hero h1 {
+    font-family: "Chewy", system-ui;
+    font-size: 4.5rem;
+    color: #4f315a;
+    margin-bottom: 15px;
+}
+
+.projects-hero p {
+    color: #4f315a;
+    font-size: 1.3rem;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+}
+
+.project-card {
+    text-decoration: none;
+    background-color: #f7f1f8;
+    border: 2px solid #dccbe2;
+    border-radius: 28px;
+    padding: 38px;
+    box-shadow: 0 8px 18px rgba(79, 49, 90, 0.10);
+    transition: 0.25s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    background-color: #ede3f0;
+    box-shadow: 0 16px 30px rgba(79, 49, 90, 0.18);
+}
+
+.project-card h2 {
+    font-family: "Chewy", system-ui;
+    color: #4f315a;
+    font-size: 2rem;
+    margin-bottom: 18px;
+}
+
+.project-card p {
+    color: #4f315a;
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+/* =========================
+   PROJECT DETAIL PAGES
+========================= */
+
+.project-detail-page {
+    padding: 70px 10%;
+}
+
+.project-detail-hero {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.project-label {
+    color: #6d4d79;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+.project-detail-hero h1 {
+    font-family: "Chewy", system-ui;
+    color: #4f315a;
+    font-size: 5rem;
+    margin-bottom: 20px;
+}
+
+.project-intro {
+    max-width: 800px;
+    margin: 0 auto 35px;
+    font-size: 1.2rem;
+    line-height: 1.9;
+    color: #4f315a;
+}
+
+.project-link {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #6d4d79;
+    color: white;
+    padding: 14px 30px;
+    border-radius: 40px;
+    transition: 0.25s ease;
+}
+
+.project-link:hover {
+    background-color: #845f92;
+    transform: scale(1.08);
+}
+
+/* MAIN PROJECT IMAGE UNDER VIEW PROJECT BUTTON */
+
+.project-main-image {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 55px;
+}
+
+.project-main-image img {
+    width: 100%;
+    max-width: 1100px;
+    max-height: 650px;
+    object-fit: cover;
+    border-radius: 30px;
+    box-shadow: 0 10px 30px rgba(79, 49, 90, 0.15);
+    transition: 0.3s ease;
+}
+
+.project-main-image img:hover {
+    transform: scale(1.01);
+}
+
+/* PLACEHOLDER IMAGE BOX */
+
+.project-image-placeholder {
+    height: 400px;
+    background-color: #f7f1f8;
+    border-radius: 30px;
+    border: 2px dashed #b697c0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6d4d79;
+    margin-bottom: 55px;
+}
+
+/* CONTENT SECTIONS */
+
+.project-detail-section {
+    background-color: #f7f1f8;
+    border-radius: 28px;
+    padding: 40px;
+    margin-bottom: 35px;
+    box-shadow: 0 8px 18px rgba(79, 49, 90, 0.10);
+    transition: 0.25s ease;
+}
+
+.project-detail-section:hover {
+    transform: translateY(-4px);
+}
+
+.project-detail-section h2 {
+    font-family: "Chewy", system-ui;
+    color: #4f315a;
+    font-size: 2.5rem;
+    margin-bottom: 18px;
+}
+
+.project-detail-section p {
+    color: #4f315a;
+    font-size: 1.1rem;
+    line-height: 1.9;
+}
+
+/* TECH STACK */
+
+.tech-stack-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.tech-stack-list span {
+    background-color: #dccbe2;
+    color: #4f315a;
+    padding: 10px 18px;
+    border-radius: 30px;
+    font-weight: bold;
+}
+
+/* PROJECT IMAGE GRID */
+
+.project-two-images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+    margin-top: 35px;
+}
+
+/* SMALL PROJECT IMAGES */
+
+.small-image-placeholder {
+    height: 300px;
+    overflow: hidden;
+    border-radius: 24px;
+    border: 2px solid #dccbe2;
+    background-color: #f7f1f8;
+    box-shadow: 0 8px 18px rgba(79, 49, 90, 0.10);
+    transition: 0.25s ease;
+}
+
+.small-image-placeholder:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 30px rgba(79, 49, 90, 0.18);
+}
+
+.small-image-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: 0.3s ease;
+}
+
+.small-image-placeholder:hover img {
+    transform: scale(1.03);
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media (max-width: 950px) {
+
+    nav {
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .img-name-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .main-img img {
+        width: 100%;
+        height: auto;
+    }
+
+    .home-name-overlay {
+        font-size: 4rem;
+    }
+
+    .projects-grid,
+    .project-two-images {
+        grid-template-columns: 1fr;
+    }
+
+    .projects-hero h1,
+    .project-detail-hero h1 {
+        font-size: 3.2rem;
+    }
+
+    .social-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-me-description {
+        font-size: 1.25rem;
+    }
+
+    .project-detail-page,
+    .projects-page {
+        padding: 50px 6%;
+    }
+
+    .project-main-image img {
+        max-height: none;
+    }
+}
